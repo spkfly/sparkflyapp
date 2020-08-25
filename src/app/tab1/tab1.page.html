@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
     <ion-toolbar>
         <ion-title>
-            Respect Women
+            Home
         </ion-title>
     </ion-toolbar>
 </ion-header>
@@ -17,14 +17,8 @@
 
 </ion-content>
 
-<ion-content 
-    [scrollEvents]="true"
-    (ionScrollStart)="logScrollStart()"
-    (ionScroll)="logScrolling($event)"
-    (ionScrollEnd)="logScrollEnd()">
-
-    <h1>Main Content</h1>
-    <div slot="fixed">
-        <h1>Fixed Content</h1>
-    </div>
-</ion-content>
+<ion-button
+    color="primary"
+    expand="block"
+    size="large">Button
+</ion-button>
