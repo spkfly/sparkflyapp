@@ -1,3 +1,31 @@
 ion-tab-bar {
     background-color: #1a202c;
 }
+
+.button_home {
+    --background: #1f7872;
+    --color: #ffffff;
+    --color-focused: #ffffff;
+    --color-selected: #ffffff;
+}
+
+.button_profile {
+    --background: #71b095;
+    --color: #ffffff;
+    --color-focused: #ffffff;
+    --color-selected: #ffffff;
+}
+
+.button_messages {
+    --background: #dedba6;
+    --color: #ffffff;
+    --color-focused: #ffffff;
+    --color-selected: #ffffff;
+}
+
+.button_dates {
+    --background: #d13f30;
+    --color: #ffffff;
+    --color-focused: #ffffff;
+    --color-selected: #ffffff;
+}

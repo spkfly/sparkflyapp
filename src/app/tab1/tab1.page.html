@@ -1,24 +1,25 @@
-<ion-header [translucent]="true">
+<ion-header>
     <ion-toolbar>
-        <ion-title>
-            Home
-        </ion-title>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-button color="secondary" expand="full">Calendar</ion-button>
+                </ion-col>
+                <ion-col>
+                    <ion-button color="secondary" expand="full">Photos</ion-button>
+                </ion-col>
+                <ion-col>
+                    <ion-button color="secondary" expand="full">Stories</ion-button>
+                </ion-col>
+                <ion-col>
+                    <ion-button color="secondary" expand="full">Other</ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
     </ion-toolbar>
-</ion-header>
+</ion-header>>
 
 <ion-content [fullscreen]="true">
-    <ion-header collapse="condense">
-        <ion-toolbar>
-            <ion-title size="large">Tab 1</ion-title>
-        </ion-toolbar>
-    </ion-header>
-
-    <app-explore-container name="Tab 1 page"></app-explore-container>
+    <img src="assets/Spot.jpg">
 
 </ion-content>
-
-<ion-button
-    color="primary"
-    expand="block"
-    size="large">Button
-</ion-button>
