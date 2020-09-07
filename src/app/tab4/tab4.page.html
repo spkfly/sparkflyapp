@@ -1,41 +1,24 @@
-<ion-header>
-    <ion-toolbar>
-        <ion-grid>
-            <ion-row>
-                <ion-col>
-                    <ion-button color="warning" expand="full">New Date</ion-button>
-                </ion-col>
-                <ion-col>
-                    <ion-button color="secondary" expand="full">Research</ion-button>
-                </ion-col>
-                <ion-col>
-                    <ion-button color="secondary" expand="full">Suggestions</ion-button>
-                </ion-col>
-                <ion-col>
-                    <ion-button color="secondary" expand="full">Save</ion-button>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </ion-toolbar>
-</ion-header>>
-
 <ion-content [fullscreen]="true">
-    <ion-item>
-        <ion-label>With</ion-label>
-        <ion-select value="kieran" ok-text="Okay" cancel-text="Dismiss">
-            <ion-select-option value="kieran">Kieran Taylor</ion-select-option>
-            <ion-select-option value="neil">Neil Klingensmith</ion-select-option>
-            <ion-select-option value="will">Will Rodriguez</ion-select-option>
-            <ion-select-option value="emily">Emily Daly</ion-select-option>
-        </ion-select>
-    </ion-item>
-    <ion-item>
-        <ion-label>When</ion-label>
-        <ion-select value="kieran" ok-text="Okay" cancel-text="Dismiss">
-            <ion-select-option value="kieran">Kieran Taylor</ion-select-option>
-            <ion-select-option value="neil">Neil Klingensmith</ion-select-option>
-            <ion-select-option value="will">Will Rodriguez</ion-select-option>
-            <ion-select-option value="emily">Emily Daly</ion-select-option>
-        </ion-select>
-    </ion-item>
+    <ion-grid>
+        <ion-row class="ion-align-items-center ion-justify-content-center">
+            <ion-col>
+                <ion-button size="large" color="warning">Plan a New Date</ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center ion-justify-content-center">
+            <ion-col>
+                <ion-button size="large" color="secondary">Current Date</ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center ion-justify-content-center">
+            <ion-col>
+                <ion-button size="large" color="success">Previous Dates</ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center ion-justify-content-center">
+            <ion-col>
+                <ion-button size="large" color="success">Upcoming Dates</ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>
