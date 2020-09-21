@@ -8,3 +8,10 @@ ion-header {
 ion-content {
     --ion-background-color: #71b095;
 }
+
+ion-footer {
+    --ion-background-color: #71b095;
+    border: 0px !important;
+    border-bottom-color: transparent !important;
+    border-bottom: none !important;
+}

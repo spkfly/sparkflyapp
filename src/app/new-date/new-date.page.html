@@ -31,6 +31,56 @@
     </ion-item>
     <ion-item>
         <ion-label>When</ion-label>
-        <ion-datetime display-format="D MMM YYYY H:mm" min="1997" max="2010" value="2005-06-17T11:06Z"></ion-datetime>
+        <ion-datetime display-format="MMM DD" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+    <ion-item>
+        <ion-label>Activity 1</ion-label>
+        <ion-select value="act1" ok-text="Okay" cancel-text="Dismiss">
+            <ion-select-option value="act1">Dinner</ion-select-option>
+            <ion-select-option value="act2">Movie</ion-select-option>
+            <ion-select-option value="act3">Park</ion-select-option>
+            <ion-select-option value="act4">Arson</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>Time</ion-label>
+        <ion-datetime display-format="hh:mm A" placeholder="Select Time"></ion-datetime>
+    </ion-item>
+    <ion-item>
+        <ion-label>Add Another Activity</ion-label>
+        <ion-select value="act1" ok-text="Okay" cancel-text="Dismiss">
+            <ion-select-option value="act1">Dinner</ion-select-option>
+            <ion-select-option value="act2">Movie</ion-select-option>
+            <ion-select-option value="act3">Park</ion-select-option>
+            <ion-select-option value="act4">Arson</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>Food/Drink</ion-label>
+        <ion-select value="f1" ok-text="Okay" cancel-text="Dismiss">
+            <ion-select-option value="f1">Pizza Hut</ion-select-option>
+            <ion-select-option value="f2">Pizza Hut</ion-select-option>
+            <ion-select-option value="f3">Kentucky Fried Chicken</ion-select-option>
+            <ion-select-option value="f4">Pizza Hut</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>Time</ion-label>
+        <ion-datetime display-format="hh:mm A" placeholder="Select Time"></ion-datetime>
+    </ion-item>
+    <ion-item>
+        <ion-label>Add Another Food/Drink</ion-label>
+        <ion-select value="f1" ok-text="Okay" cancel-text="Dismiss">
+            <ion-select-option value="f1">Pizza Hut</ion-select-option>
+            <ion-select-option value="f2">Pizza Hut</ion-select-option>
+            <ion-select-option value="f3">Kentucky Fried Chicken</ion-select-option>
+            <ion-select-option value="f4">Pizza Hut</ion-select-option>
+        </ion-select>
     </ion-item>
 </ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-button color="warning" expand="full" routerLink="/" routerDirection="back">Send Invite</ion-button>
+    </ion-toolbar>
+</ion-footer>
