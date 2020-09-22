@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'tab4',
     loadChildren: () => import('./tab4/tab4.module').then( m => m.Tab4PageModule)
+  },
+  {
+    path: 'calendar',
+    loadChildren: () => import('./calendar/calendar.module').then( m => m.CalendarPageModule)
   }
 ];
 @NgModule({
