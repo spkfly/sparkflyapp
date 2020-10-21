@@ -3,29 +3,35 @@
         <ion-grid>
             <ion-row>
                 <ion-col>
-                    <ion-button color="secondary" expand="full" routerLink="/calendar" routerDirection="forward">Calendar</ion-button>
+                    <ion-button color="success" expand="full" routerLink="/calendar" routerDirection="forward">Calendar</ion-button>
                 </ion-col>
                 <ion-col>
-                    <ion-button color="secondary" expand="full">Photos</ion-button>
+                    <ion-button color="success" expand="full">Photos</ion-button>
                 </ion-col>
                 <ion-col>
-                    <ion-button color="secondary" expand="full">Stories</ion-button>
+                    <ion-button color="success" expand="full">Stories</ion-button>
                 </ion-col>
                 <ion-col>
-                    <ion-button color="secondary" expand="full" routerLink="/login-page" routerDirection="forward">Sign In</ion-button>
+                    <ion-button color="success" expand="full" routerLink="/login-page" routerDirection="forward">Sign In</ion-button>
                 </ion-col>
             </ion-row>
         </ion-grid>
     </ion-toolbar>
-</ion-header>>
+</ion-header>
 
-<ion-content [fullscreen]="true">
-    <ion-content class="card-background-page">
-        <ion-card>
-            <img src="assets/Spot.jpg">
-            <div class="card-title">Spot</div>
-            <div class="card-subtitle">I love belly rubs and licking myself all over.</div>
-        </ion-card>
-    </ion-content>
-
+<ion-content class="home-screen">
+    <ion-list lines="full">
+        <ion-item>
+            <ion-img width="5" height="5" src="assets/camping.jpg"></ion-img>
+            <p class="home-couple">JARED + MELANIE</p>
+            <p class="home-date">August 28, 2020</p>
+            <p class="home-description">Had a blast tenting this weekend. Bugs were nuts through.</p>
+        </ion-item>
+        <ion-item>
+            <ion-img width="5" height="5" src="assets/google_map.jpg"></ion-img>
+            <p class="home-couple">QUINN + TODDL</p>
+            <p class="home-date">August 19, 2020</p>
+            <p class="home-description">Si-Pie Pizzeria</p>
+        </ion-item>
+    </ion-list>
 </ion-content>
