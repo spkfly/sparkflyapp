@@ -19,19 +19,39 @@
     </ion-toolbar>
 </ion-header>
 
+<!--
 <ion-content class="home-screen">
-    <ion-list lines="full">
-        <ion-item>
-            <ion-img width="5" height="5" src="assets/camping.jpg"></ion-img>
+    <ion-list class="list" lines="full">
+        <ion-item class="list-item">
+            <img class="img" src="assets/camping.jpg">
             <p class="home-couple">JARED + MELANIE</p>
             <p class="home-date">August 28, 2020</p>
             <p class="home-description">Had a blast tenting this weekend. Bugs were nuts through.</p>
         </ion-item>
         <ion-item>
-            <ion-img width="5" height="5" src="assets/google_map.jpg"></ion-img>
-            <p class="home-couple">QUINN + TODDL</p>
-            <p class="home-date">August 19, 2020</p>
-            <p class="home-description">Si-Pie Pizzeria</p>
+            
         </ion-item>
     </ion-list>
 </ion-content>
+-->
+
+<ion-card class="home-screen">
+    <ion-item class="card-item">
+        <ion-card-content class="home-card">
+            <img class="img" src="assets/camping.jpg">
+            <p class="home-couple">JARED + MELANIE</p>
+            <p class="home-date">August 28, 2020</p>
+            <p class="home-description">Had a blast tenting this weekend. Bugs were nuts through.</p>
+        </ion-card-content>
+    </ion-item>
+    <ion-item class="card-item">
+        <ion-card-content class="home-card">
+            <img class="img" src="assets/google_map.jpg">
+            <p class="home-couple">QUINN + TODD</p>
+            <ion-icon class="card-icon" name="thumbs-up"></ion-icon>
+            <ion-icon class="card-icon" name="trophy"></ion-icon>
+            <p class="home-date">August 19, 2020</p>
+            <p class="home-description">Si-Pie Pizzeria</p>
+        </ion-card-content>
+    </ion-item>
+</ion-card>

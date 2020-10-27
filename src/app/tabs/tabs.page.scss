@@ -2,6 +2,21 @@ ion-tab-bar {
     background-color: #1a202c;
 }
 
-.transparent_button {
-    --background: rgba(255, 0, 0, 0.0);
+
+.tab-button-left {
+    background-color: #1a202c;
+    margin-left: 2px;
+}
+.tab-button-middle {
+    background-color: #1a202c;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.tab-button-right {
+    background-color: #1a202c;
+    margin-right: 2px;
+}
+.tab-logo {
+    margin-left: 5px;
+    margin-right: 5px;
 }
