@@ -26,8 +26,8 @@ export class LoginPagePageModule {
   handle:string;
   password:string;
   
-  private getUserProfileImg(handle:string,password:string) {
+  private getUserDescription(handle:string,password:string) {
     console.log(handle,password);
-    this.httpClient.get('https://sparkfly.us/api/v0/usr/'+handle+'/'+Md5.hashStr(password)+'/profileimg');
+    return this.httpClient.get('https://sparkfly.us/api/v0/usr/'+handle+'/'+Md5.hashStr(password)+'/description');
   }
 }

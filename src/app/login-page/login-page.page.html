@@ -1,26 +1,19 @@
 <ion-header>
   <ion-toolbar>
-    <ion-button fill="clear" routerLink="/tab1" routerDirection="forward">Cancel</ion-button>
     <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="sign-in">
+<ion-content [fullscreen]="true">
   <form>
-    <ion-item lines="full">
-      <ion-label>Username</ion-label>
-      <ion-input id="handle" [(ngModel)]="handle" type="text" required="true"></ion-input>
+    <ion-item>
+      <ion-input class="login-input" [(ngModel)]="handle" placeholder="Username" type="text" required="true"></ion-input>
     </ion-item>
-
-    <ion-item lines="full">
-      <ion-label>Password</ion-label>
-      <ion-input id="password" [(ngModel)]="password" type="password" required="true"></ion-input>
+    <ion-item>
+      <ion-input class="login-input" [(ngModel)]="password" placeholder="Password" type="password" required="true"></ion-input>
     </ion-item>
-
-    <ion-row>
-      <ion-col>
-        <ion-button type="submit" expand="block">Sign In</ion-button>
-      </ion-col>
-    </ion-row>
+    <ion-item>
+      <ion-button class="login-button" type="submit" expand="block">Sign In</ion-button>
+    </ion-item>
   </form>
 </ion-content>

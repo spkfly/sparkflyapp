@@ -12,36 +12,20 @@
                     <ion-button color="success" expand="full">Stories</ion-button>
                 </ion-col>
                 <ion-col>
-                    <ion-button color="success" expand="full" routerLink="/login-page" routerDirection="forward">Sign In</ion-button>
+                    <ion-button color="success" expand="full">Other</ion-button>
                 </ion-col>
             </ion-row>
         </ion-grid>
     </ion-toolbar>
 </ion-header>
-
 <!--
-<ion-content class="home-screen">
-    <ion-list class="list" lines="full">
-        <ion-item class="list-item">
-            <img class="img" src="assets/camping.jpg">
-            <p class="home-couple">JARED + MELANIE</p>
-            <p class="home-date">August 28, 2020</p>
-            <p class="home-description">Had a blast tenting this weekend. Bugs were nuts through.</p>
-        </ion-item>
-        <ion-item>
-            
-        </ion-item>
-    </ion-list>
-</ion-content>
--->
-
 <ion-card class="home-screen">
     <ion-item class="card-item">
         <ion-card-content class="home-card">
             <img class="img" src="assets/camping.jpg">
             <p class="home-couple">JARED + MELANIE</p>
             <p class="home-date">August 28, 2020</p>
-            <p class="home-description">Had a blast tenting this weekend.<br>Bugs were nuts through.</p>
+            <p class="home-description">Had a blast tenting this weekend.<br>Bugs were nuts though.</p>
         </ion-card-content>
     </ion-item>
     <ion-item class="card-item">
@@ -55,3 +39,26 @@
         </ion-card-content>
     </ion-item>
 </ion-card>
+-->
+<ion-grid class="home-screen">
+    <ion-row>
+        <ion-col>
+            <img src="assets/camping.jpg">
+        </ion-col>
+        <ion-col>
+            <div class="home-couple">JARED + MELANIE</div>
+        </ion-col>
+        <ion-col>
+            <div class="home-date">August 28, 2020</div>
+        </ion-col>
+        <ion-col>
+            <ion-icon class="card-icon" name="thumbs-up"></ion-icon>
+        </ion-col>
+        <ion-col>
+            <ion-icon class="card-icon" name="trophy"></ion-icon>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <div class="home-description">Had a blast tenting this weekend. Bugs were nuts though.</div>
+    </ion-row>
+</ion-grid>

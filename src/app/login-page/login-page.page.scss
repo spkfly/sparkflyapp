@@ -1,7 +1,18 @@
 ion-header {
-    --ion-background-color: #FFFFFF;
+    --ion-background-color: #1a202c;
+    ion-toolbar {
+        ion-title {
+            color: white;
+        }
+    }
 }
 ion-content {
-    --ion-background-color: #FFFFFF;
-    
+    --background: url('../../assets/logo_background.jpg') no-repeat center/cover fixed;
+}
+.login-input {
+
+}
+.login-button {
+
+
 }
