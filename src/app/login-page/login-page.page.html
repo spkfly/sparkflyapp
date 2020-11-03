@@ -1,19 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title>Login or Sign-Up</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" scroll-y="false">
   <form>
     <ion-item>
-      <ion-input class="login-input" [(ngModel)]="handle" placeholder="Username" type="text" required="true"></ion-input>
+      <ion-input class="login-input" [(ngModel)]="handle" placeholder="Username" type="text"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input class="login-input" [(ngModel)]="password" placeholder="Password" type="password" required="true"></ion-input>
+      <ion-input class="login-input" [(ngModel)]="password" placeholder="Password" type="password"></ion-input>
     </ion-item>
     <ion-item>
       <ion-button class="login-button" type="submit" expand="block">Sign In</ion-button>
     </ion-item>
   </form>
+  <ion-button routerLink="/" routerDirection="back">Cancel</ion-button>
 </ion-content>

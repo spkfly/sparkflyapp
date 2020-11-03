@@ -1,45 +1,59 @@
 <ion-content [fullscreen]="true">
+    <ion-header>
+        <ion-item>
+            <ion-button color="success">New Chat
+                <ion-icon name="chatbubble-outline"></ion-icon>
+            </ion-button>
+        </ion-item>
+    </ion-header>
+
     <ion-input placeholder="Search Connections"></ion-input>
+
     <ion-item button routerLink="/chat" routerDirection="forward">
         <ion-thumbnail slot="start">
-            <img src="assets/Spot.jpg" />
+            <img src="assets/Spot.jpg">
         </ion-thumbnail>
-        <ion-label color="secondary"> Rachel </ion-label>
+        <ion-label class="msg-name" color="success">rachel</ion-label>
         <ion-note slot="end">Last week was so fun!</ion-note>
     </ion-item>
+
     <ion-item button routerLink="/chat" routerDirection="forward">
         <ion-thumbnail slot="start">
-            <img src="assets/Spot.jpg" />
+            <img src="assets/Spot.jpg">
         </ion-thumbnail>
-        <ion-label color="secondary"> Emily </ion-label>
+        <ion-label class="msg-name" color="success">emily</ion-label>
         <ion-note slot="end">Okay Jared it's time to choose between me and Rachel.</ion-note>
     </ion-item>
+
     <ion-item button routerLink="/chat" routerDirection="forward">
         <ion-thumbnail slot="start">
-            <img src="assets/Spot.jpg" />
+            <img src="assets/Spot.jpg">
         </ion-thumbnail>
-        <ion-label color="secondary"> Neil </ion-label>
+        <ion-label class="msg-name" color="success">neil</ion-label>
         <ion-note slot="end">Hey want to come to my cabin in the woods :)</ion-note>
     </ion-item>
+
     <ion-item button routerLink="/chat" routerDirection="forward">
         <ion-thumbnail slot="start">
-            <img src="assets/Spot.jpg" />
+            <img src="assets/Spot.jpg">
         </ion-thumbnail>
-        <ion-label color="secondary"> Jared </ion-label>
+        <ion-label class="msg-name" color="success">jared</ion-label>
         <ion-note slot="end">Jared it's you from the future, don't trust Neil.</ion-note>
     </ion-item>
+
     <ion-item button routerLink="/chat" routerDirection="forward">
         <ion-thumbnail slot="start">
-            <img src="assets/Spot.jpg" />
+            <img src="assets/Spot.jpg">
         </ion-thumbnail>
-        <ion-label color="secondary"> Will </ion-label>
+        <ion-label class="msg-name" color="success">will</ion-label>
         <ion-note slot="end">You still owe me five bucks you bum.</ion-note>
     </ion-item>
+
     <ion-item button routerLink="/chat" routerDirection="forward">
         <ion-thumbnail slot="start">
-            <img src="assets/Spot.jpg" />
+            <img src="assets/Spot.jpg">
         </ion-thumbnail>
-        <ion-label color="secondary"> Kieran </ion-label>
+        <ion-label stacked class="msg-name" color="success">kieran</ion-label>
         <ion-note slot="end">Jared I'm trapped in your phone help.</ion-note>
     </ion-item>
 

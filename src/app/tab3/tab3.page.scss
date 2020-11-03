@@ -1,13 +1,15 @@
 ion-content {
     --ion-background-color: #FFFFFF;
 }
-
+ion-header {
+    --ion-background-color: #dedba6;
+}
 ion-input {
     --background: #dedba6;
 }
-
-ion-label {
-    --color: #1f7872;
+.msg-name {
+    text-transform: capitalize;
+    font-weight: bold;
 }
 
 ion-note {
