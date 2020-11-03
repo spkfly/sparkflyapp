@@ -1,60 +1,101 @@
 <ion-header>
     <ion-toolbar>
         <ion-grid>
-            <ion-row>
-                <ion-col>
-                    <ion-button color="success" expand="full" routerLink="/calendar" routerDirection="forward">Calendar</ion-button>
+            <ion-row class="header-row">
+                <ion-col class="header-col" size="3">
+                    <ion-button class="home-header-button" color="success" expand="full" routerLink="/calendar" routerDirection="forward">Calendar</ion-button>
                 </ion-col>
-                <ion-col>
-                    <ion-button color="success" expand="full">Photos</ion-button>
+                <ion-col class="header-col" size="3">
+                    <ion-button class="home-header-button" color="success" expand="full">Photos</ion-button>
                 </ion-col>
-                <ion-col>
-                    <ion-button color="success" expand="full">Stories</ion-button>
+                <ion-col class="header-col" size="3">
+                    <ion-button class="home-header-button" color="success" expand="full">Stories</ion-button>
                 </ion-col>
-                <ion-col>
-                    <ion-button color="success" expand="full">Other</ion-button>
+                <ion-col class="header-col" size="3">
+                    <ion-button class="home-header-button" color="success" expand="full">Faves</ion-button>
                 </ion-col>
             </ion-row>
         </ion-grid>
     </ion-toolbar>
 </ion-header>
-<!--
-<ion-card class="home-screen">
-    <ion-item class="card-item">
-        <ion-card-content class="home-card">
-            <img class="img" src="assets/camping.jpg">
-            <p class="home-couple">JARED + MELANIE</p>
-            <p class="home-date">August 28, 2020</p>
-            <p class="home-description">Had a blast tenting this weekend.<br>Bugs were nuts though.</p>
-        </ion-card-content>
-    </ion-item>
-    <ion-item class="card-item">
-        <ion-card-content class="home-card">
-            <img class="img" src="assets/google_map.jpg">
-            <p class="home-couple">QUINN + TODD</p>
-            <ion-icon class="card-icon" name="thumbs-up"></ion-icon>
-            <ion-icon class="card-icon" name="trophy"></ion-icon>
-            <p class="home-date">August 19, 2020</p>
-            <div class="home-description">Si-Pie Pizzeria</div>
-        </ion-card-content>
-    </ion-item>
-</ion-card>
--->
+
+<ion-content [fullscreen]="true">
 <ion-grid>
-    <ion-row>
-        <ion-col size="4">
-            <img src="assets/camping.jpg">
-        </ion-col>
-        <ion-col size="6">
-            <div class="home-couple">JARED + MELANIE</div>
-            <div class="home-date">August 28, 2020</div>
-            <div class="home-description">Had a blast tenting this weekend. Bugs were nuts though.</div>
-        </ion-col>
-        <ion-col size="1">
-            <ion-icon name="thumbs-up"></ion-icon>
-        </ion-col>
-        <ion-col size="1">
-            <ion-icon name="trophy"></ion-icon>
-        </ion-col>
-    </ion-row>
+    <ion-item>
+        <ion-card class="home-card">
+            <ion-row>
+                <ion-col size="3">
+                    <img class="home-img" src="assets/white-red_heart.jpg">
+                </ion-col>
+                <ion-col size="7">
+                    <div class="dating-status">currently dating</div>
+                    <div class="home-couple">tien + kieran</div>
+                </ion-col>
+                <ion-col size="1">
+                    <ion-icon name="thumbs-up"></ion-icon>
+                </ion-col>
+                <ion-col size="1">
+                    <ion-icon name="trophy"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+    </ion-item>
+    <ion-item>
+        <ion-card>
+            <ion-row>
+                <ion-col size="3">
+                    <img class="home-img" src="assets/camping.jpg">
+                </ion-col>
+                <ion-col size="7">
+                    <div class="home-couple">jared + melanie</div>
+                    <div class="home-date">august 28, 2020</div>
+                    <div class="home-description">Had a blast tenting this weekend. Bugs were nuts though.</div>
+                </ion-col>
+                <ion-col size="1">
+                    <ion-icon name="thumbs-up"></ion-icon>
+                </ion-col>
+                <ion-col size="1">
+                    <ion-icon name="trophy"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+    </ion-item>
+    <ion-item>
+        <ion-card>
+            <ion-row>
+                <ion-col size="3">
+                    <img class="home-img" src="assets/google_map.jpg">
+                </ion-col>
+                <ion-col size="7">
+                    <div class="home-couple">quinn + todd</div>
+                    <div class="home-date">august 19, 2020</div>
+                    <div class="home-description">Si-Pie Pizzeria</div>
+                </ion-col>
+                <ion-col size="1">
+                    <ion-icon name="thumbs-up"></ion-icon>
+                </ion-col>
+                <ion-col size="1">
+                    <ion-icon name="trophy"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+    </ion-item>
+    <ion-item>
+        <ion-card>
+            <ion-row>
+                <ion-col size="10">
+                    <div class="home-couple">wes</div>
+                    <div class="home-date">august 19, 2020</div>
+                    <div class="home-description">Went on a date with Rachel and took some salsa dancing lessons. Turns out Rachel is a pro, but I seem to have 2 left feet. So fun though.</div>
+                </ion-col>
+                <ion-col size="1">
+                    <ion-icon name="thumbs-up"></ion-icon>
+                </ion-col>
+                <ion-col size="1">
+                    <ion-icon name="trophy"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+    </ion-item>
 </ion-grid>
+</ion-content>

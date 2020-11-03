@@ -1,40 +1,62 @@
 ion-header {
     --ion-background-color: #1a202c;
 }
-
-ion-content {
-    --ion-background-color: #FFFFFF;
+ion-toolbar {
+    width: 100%;
+    height: 100%;
 }
 ion-grid {
     background-color: #ffffff;
 }
-
+ion-card {
+    width: auto;
+    height: auto;
+}
+.header-row {
+    display: flex;
+    justify-content: center;
+}
+.dating-status {
+    width: auto;
+    height: auto;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    color: #d13f30;
+    font-size: small;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.home-img {
+    width: auto;
+    height: auto;
+}
 .home-couple {
-    color: black;
     width: auto;
     height: auto;
     margin-top: 1%;
     margin-bottom: 1%;
-    font-size: medium;
+    color: #1f7872;
+    font-size: small;
     font-weight: bold;
-    text-align: center;
+    text-transform: uppercase;
 }
 ion-icon {
-    color: #d13f30;
-    margin-top: 10%;
+    color: #1f7872;
 }
 .home-date {
-    color: gray;
     width: auto;
     height: auto;
-    margin-bottom: 1%;
-    font-size: medium;
-    text-align: center;
+    margin-bottom: 2%;
+    color: #1f7872;
+    font-size: small;
+    font-weight: lighter;
+    text-transform: capitalize;
 }
 .home-description {
-    color: black;
     width: auto;
     height: auto;
+    color: #1f7872;
     font-size: small;
+    font-weight: normal;
     column-span: all;
 }

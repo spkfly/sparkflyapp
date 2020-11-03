@@ -1,28 +1,31 @@
 <ion-header>
     <ion-toolbar>
         <ion-grid>
-            <ion-row>
-                <ion-col>
-                    <ion-button color="success" expand="full" routerLink="/calendar" routerDirection="forward">Calendar</ion-button>
+            <ion-row class="header-row">
+                <ion-col class="header-col" size="3">
+                    <ion-button class="home-header-button" color="success" expand="full" routerLink="/calendar" routerDirection="forward">Calendar</ion-button>
                 </ion-col>
-                <ion-col>
-                    <ion-button color="success" expand="full">Photos</ion-button>
+                <ion-col class="header-col" size="3">
+                    <ion-button class="home-header-button" color="success" expand="full">Photos</ion-button>
                 </ion-col>
-                <ion-col>
-                    <ion-button color="success" expand="full">Stories</ion-button>
+                <ion-col class="header-col" size="3">
+                    <ion-button class="home-header-button" color="success" expand="full">Stories</ion-button>
                 </ion-col>
-                <ion-col>
-                    <ion-button color="success" expand="full">Other</ion-button>
+                <ion-col class="header-col" size="3">
+                    <ion-button class="home-header-button" color="success" expand="full">Faves</ion-button>
                 </ion-col>
             </ion-row>
         </ion-grid>
     </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="card-background-page">
-    <ion-card>
-        <img class="profile-img" src="assets/Spot.jpg">
-        <div class="card-title">Spot</div>
-        <div class="card-subtitle">I love belly rubs and licking myself all over.</div>
-    </ion-card>
+<ion-content [fullscreen]="true" scroll-y="false">
+    <ion-div class="prof-card">
+        <ion-card>
+            <img class="profile-img" src="assets/Spot.jpg">
+            <div class="card-title">Spot</div>
+            <div class="card-subtitle">I love belly rubs and licking myself all over.</div>
+        </ion-card>
+    </ion-div>
+    <div class="prof-bottom">some text</div>
 </ion-content>
