@@ -4,8 +4,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <form>
-    
+<ion-content padding>
+  <form [formGroup]="login_form" (ngSubmit)="onSubmit(login_form.value)">
+    <ion-item>
+      <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button></button>
+    </ion-item>
   </form>
 </ion-content>

@@ -8,8 +8,7 @@
   <form [formGroup]="signup_form" (ngSubmit)="onSubmit(signup_form.value)">
     
     <ion-item>
-      <ion-label>First Name</ion-label>
-      <ion-input type="text" formControlName="firstName"></ion-input>
+      <ion-input type="text" placeholder="First Name" formControlName="firstName"></ion-input>
     </ion-item>
     <div class="valid-errors">
       <ng-container *ngFor="let validation of validation_messages.firstName">
