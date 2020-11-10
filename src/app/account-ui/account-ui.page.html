@@ -1,0 +1,22 @@
+<!--
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login or Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+-->
+
+<ion-content class="ui-page">
+  <ion-item>
+    <img class="ui-img" src="/assets/logo_red_blue.jpg">
+  </ion-item>
+  <ion-grid>
+    <ion-row align-self-center>
+      <ion-col align-self-center>
+        <ion-button [routerLink]="['/login-page']" class="ui-button" expand="block" color="success">Sign In</ion-button>
+        <div class="divider line one-line">or</div>
+        <ion-button [routerLink]="['/sign-up']" class="ui-button" expand="block" color="secondary">Create new account</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

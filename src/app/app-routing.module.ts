@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  //{
-  //  path: '',
-  //  redirectTo: 'login-page', //directs the user to the login page initially
-  //  pathMatch: 'full'
-  //},
+/*  {
+    path: '',
+    redirectTo: 'account-ui', //directs the user to the login page initially
+    pathMatch: 'full'
+  },
+  */
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
@@ -34,7 +35,16 @@ const routes: Routes = [
   {
     path: 'edit-profile',
     loadChildren: () => import('./edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
+  },
+  {
+    path: 'sign-up',
+    loadChildren: () => import('./sign-up/sign-up.module').then( m => m.SignUpPageModule)
+  },
+  {
+    path: 'account-ui',
+    loadChildren: () => import('./account-ui/account-ui.module').then( m => m.AccountUiPageModule)
   }
+
 
 ];
 @NgModule({

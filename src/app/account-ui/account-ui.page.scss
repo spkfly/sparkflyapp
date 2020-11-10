@@ -1,0 +1,44 @@
+ion-content {
+    --ion-background-color: #1a202c;
+}
+
+.ui-page {
+    width: auto;
+    height: auto;
+    justify-content: center;
+}
+.ui-img {
+    display: block;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+}
+.ui-button {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.divider {
+    display: flex;
+    &:before,
+    &:after {
+        content: "";
+        flex: 1;
+    }
+}
+.line {
+    align-items: center;
+    margin: 1em -1em;
+    color: gray;
+    &:before,
+    &:after {
+        height: 1px;
+        margin: 0 1em;
+    }
+}
+.one-line {
+    &:before,
+    &:after {
+        background: gray;
+    }
+}

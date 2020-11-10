@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Create An Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="signup-form-content">
+  <form [formGroup]="signup_form" (ngSubmit)="onSubmit(signup_form.value)">
+    
+    <ion-item>
+      <ion-label>First Name</ion-label>
+      <ion-input type="text" formControlName="firstName"></ion-input>
+    </ion-item>
+    <div class="valid-errors">
+      <ng-container *ngFor="let validation of validation_messages.firstName">
+        <div class="signup-error-msg" *ngIf="signup_form.get('firstName').hasError(validation.type)&&(signup_form.get('firstName').dirty||signup_form.get('firstName').touched)">
+          <ion-icon name="information-circle-outline"></ion-icon> {{validation.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    
+  </form>
+</ion-content>
