@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PasswordValidator } from '../validators/password.validator';
+import { UsernameValidator } from '../validators/username.validator';
 
 @Component({
   selector: 'app-sign-up',
@@ -38,11 +39,18 @@ export class SignUpPage implements OnInit {
     });
 
     this.signup_form = this.formBuilder.group({
+      handle: new FormControl('', Validators.compose([
+        UsernameValidator.validUsername,
+        Validators.maxLength(20),
+        Validators.minLength(5),
+        Validators.pattern('^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$'),
+        Validators.required
+      ])),
       firstName: new FormControl('', Validators.required),
       lastName: new FormControl('', Validators.required),
       email: new FormControl('', Validators.compose([
         Validators.required,
-        Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+        Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$') //must be <text>@<text>.<text>
       ])),
       gender: new FormControl(this.genders[0], Validators.required),
       matching_passwords: this.matching_passwords_group,
@@ -51,6 +59,13 @@ export class SignUpPage implements OnInit {
   }
 
   validation_messages = {
+    'handle': [
+      {type: 'required', message: 'Required'},
+      {type: 'minLength', message: 'Must be at least 5 characters long'},
+      {type: 'maxLength', message: 'Cannot be more than 25 characters long'},
+      {type: 'pattern', message: 'Must only contain letters and numbers'},
+      {type: 'validUsername', message: 'Username already taken'}
+    ],
     'firstName': [
       {type: 'required', message: 'Required'}
     ],

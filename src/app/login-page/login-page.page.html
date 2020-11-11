@@ -1,3 +1,8 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button fill="clear" [routerLink]="['/account-ui']">Cancel</ion-button>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content>
   <form class="login-form" [formGroup]="login_form" (ngSubmit)="onSubmit(login_form.value)">
