@@ -12,16 +12,17 @@ import { Md5 } from 'ts-md5/dist/md5'
 export class LoginPagePage implements OnInit {
 
   login_form: FormGroup;
+  api_data: string;
 
   constructor(
     public formBuilder: FormBuilder,
     private router: Router,
     public httpClient: HttpClient
-  ) {}
+  ) { this.api_data=''; }
 
   ngOnInit() {
     this.login_form = this.formBuilder.group({
-      email: new FormControl('', Validators.required),
+      handle: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required)
     });
   }
@@ -35,9 +36,9 @@ export class LoginPagePage implements OnInit {
     this.http.get()
   }
   */
-  private getUserProfileImg(handle:string,password:string) {
+  private getUserDescription(handle:string,password:string) {
     console.log(handle,password);
-    this.httpClient.get('https://sparkfly.us/api/v0/usr/'+handle+'/'+Md5.hashStr(password)+'/profileimg');
+    this.httpClient.get('https://sparkfly.us/api/v0/usr/'+handle+'/'+Md5.hashStr(password)+'/description');
   }
 
 }

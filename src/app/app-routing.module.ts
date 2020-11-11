@@ -17,10 +17,6 @@ const routes: Routes = [
     loadChildren: () => import('./new-date/new-date.module').then( m => m.NewDatePageModule)
   },
   {
-    path: 'tab4',
-    loadChildren: () => import('./tab4/tab4.module').then( m => m.Tab4PageModule)
-  },
-  {
     path: 'calendar',
     loadChildren: () => import('./calendar/calendar.module').then( m => m.CalendarPageModule)
   },

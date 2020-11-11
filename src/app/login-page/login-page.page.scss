@@ -1,18 +1,23 @@
-ion-header {
-    --ion-background-color: #1a202c;
-    ion-toolbar {
-        ion-title {
-            color: white;
-        }
-    }
-}
+
 ion-content {
     --background: url('../../assets/logo_background.jpg') no-repeat center/cover fixed;
 }
-.login-input {
 
+ion-item {
+    padding: 5%;
+    box-sizing: border-box;
 }
-.login-button {
 
+ion-input {
+    color: black;
+}
 
+.submit-button {
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.login-form {
+    margin-top: 40%;
 }
