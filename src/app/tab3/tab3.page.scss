@@ -6,17 +6,15 @@ ion-header {
 }
 ion-input {
     --background: #dedba6;
-}
-.msg-name {
-    text-transform: capitalize;
-    font-weight: bold;
-    position: relative;
-}
-
-ion-note {
     --color: #1f7872;
 }
-
-ion-fab-button {
-    --background: #1f7872;
+ion-label {
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-top: 25%;
+}
+div {
+    color: #1f7872;
+    font-size: small;
+    margin-top: 10%;
 }
