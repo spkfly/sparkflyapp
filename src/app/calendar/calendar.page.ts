@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Calendar } from '@ionic-native/calendar/ngx';
 
 @Component({
   selector: 'app-calendar',
@@ -8,7 +7,7 @@ import { Calendar } from '@ionic-native/calendar/ngx';
 })
 export class CalendarPage implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }
