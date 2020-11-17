@@ -26,19 +26,22 @@ export class LoginPagePage implements OnInit {
       password: new FormControl('', Validators.required)
     });
   }
-
+/*
   onSubmit(values) {
     console.log(values);
     this.router.navigate(["/tab1"]); //temporarily routes to home page
   }
-  /*
+  
   sendGetRequest() {
     this.http.get()
   }
   */
-  private getUserDescription(handle:string,password:string) {
+ 
+  getUserDescription(handle:string,password:string) {
     console.log(handle,password);
-    this.httpClient.get('https://sparkfly.us/api/v0/usr/'+handle+'/'+Md5.hashStr(password)+'/description');
-  }
+    //isValid: false;
+    console.log(this.httpClient.get('https://sparkfly.us/api/v0/usr/'+handle+'/'+Md5.hashStr(password)+'/description'));
+
+  } 
 
 }

@@ -4,18 +4,21 @@
   </ion-toolbar>
 </ion-header>
 
+<script type="text/javascript" src="jquery.js"></script>
+<script src="login-page.page.ts"></script>
+
 <ion-content>
   <form class="login-form" [formGroup]="login_form" (ngSubmit)="onSubmit(login_form.value)">
 
     <ion-item>
-      <ion-input type="text" placeholder="Username" formControlName="handle"></ion-input>
+      <ion-input id="handle-input" type="text" placeholder="Username" formControlName="handle"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+      <ion-input id="password-input" type="password" placeholder="Password" formControlName="password"></ion-input>
     </ion-item>
 
-    <ion-button class="submit-button" type="submit" expand="block" color="primary">Login</ion-button>
+    <ion-button onclick="getUserDescription(document.getElementById('handle-input').value,document.getElementById('handle-password').value)" class="submit-button" type="submit" expand="block" color="primary">Login</ion-button>
 
   </form>
 </ion-content>

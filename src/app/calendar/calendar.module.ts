@@ -9,9 +9,6 @@ import { CalendarPageRoutingModule } from './calendar-routing.module';
 import { CalendarPage } from './calendar.page';
 
 import { NgCalendarModule } from 'ionic2-calendar';
-import {registerLocaleData } from '@angular/common';
-import localDe from '@angular/common/locales/de';
-registerLocaleData(localDe);
 
 @NgModule({
   imports: [
@@ -23,7 +20,7 @@ registerLocaleData(localDe);
   ],
   declarations: [CalendarPage],
   providers: [
-    { provide: LOCALE_ID, useValue: 'de-DE' }
+    { provide: LOCALE_ID, useValue: 'en-US' }
   ]
 })
 export class CalendarPageModule {}
