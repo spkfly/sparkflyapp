@@ -18,10 +18,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   entryComponents: [],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     IonicModule.forRoot(),
-    AppRoutingModule,
-    HttpClientModule
+    AppRoutingModule
   ],
   providers: [
     StatusBar,
