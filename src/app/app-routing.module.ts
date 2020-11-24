@@ -33,7 +33,11 @@ const routes: Routes = [
   {
     path: 'account-ui',
     loadChildren: () => import('./account-ui/account-ui.module').then( m => m.AccountUiPageModule)
+  },  {
+    path: 'photos',
+    loadChildren: () => import('./photos/photos.module').then( m => m.PhotosPageModule)
   }
+
 
 
 ];
