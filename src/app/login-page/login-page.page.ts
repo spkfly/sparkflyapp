@@ -27,6 +27,8 @@ export class LoginPagePage implements OnInit {
       handle: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required)
     });
+
+    //document.getElementById('login-submit').addEventListener("click", function(){ getUserDescription(handle,password); });
   }
 
   onSubmit(values) {
@@ -34,19 +36,16 @@ export class LoginPagePage implements OnInit {
     //this.router.navigate(["/tab1"]); //temporarily routes to home page
   }
   
-  /*
+  
   sendGetRequest() {
-    
+    console.log('get request function');
   }
-  */
- 
-  //document.getElementById("login-submit").addEventListener("click", getUserDescription, false);
 
   getUserDescription(handle:string,password:string) {
-    console.log(handle,password);
+    console.log(handle, password);
     const description = this.httpClient.get('https://sparkfly.us/api/v0/usr/'+handle+'/'+Md5.hashStr(password)+'/description');
     JSON.stringify(description);
     console.log(description);
-  } 
+  }
 
 }
