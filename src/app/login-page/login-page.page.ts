@@ -22,13 +22,23 @@ export class LoginPagePage implements OnInit {
     public httpClient: HttpClient
   ) { this.api_data=''; }
 
+  // Fires only the first time the page is loaded
   ngOnInit() {
     this.login_form = this.formBuilder.group({
       handle: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required)
     });
+  }
 
-    //document.getElementById('login-submit').addEventListener("click", function(){ getUserDescription(handle,password); });
+  /* Fires each time the page is loaded
+  ionViewDidEnter() {
+    
+  } */
+
+  btnClick() {
+    let handle = document.getElementById("handle-input").toString();
+    let password = document.getElementById("password-input").toString();
+    this.getUserDescription(handle, password);
   }
 
   onSubmit(values) {
@@ -44,7 +54,6 @@ export class LoginPagePage implements OnInit {
   getUserDescription(handle:string,password:string) {
     console.log(handle, password);
     const description = this.httpClient.get('https://sparkfly.us/api/v0/usr/'+handle+'/'+Md5.hashStr(password)+'/description');
-    JSON.stringify(description);
     console.log(description);
   }
 
