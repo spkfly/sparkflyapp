@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { Md5 } from 'ts-md5/dist/md5'
+import { Md5 } from 'ts-md5/dist/md5';
 import { stringify } from 'querystring';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-login-page',
@@ -15,6 +16,7 @@ export class LoginPagePage implements OnInit {
   login_form: FormGroup;
   api_data: string;
   http: any;
+  description: Observable<any>;
 
   constructor(
     public formBuilder: FormBuilder,
@@ -36,8 +38,8 @@ export class LoginPagePage implements OnInit {
   } */
 
   btnClick() {
-    let handle = document.getElementById("handle-input").toString();
-    let password = document.getElementById("password-input").toString();
+    let handle = (<HTMLInputElement>document.getElementById("handle-input")).value;
+    let password = (<HTMLInputElement>document.getElementById("password-input")).value;
     this.getUserDescription(handle, password);
   }
 
@@ -53,8 +55,12 @@ export class LoginPagePage implements OnInit {
 
   getUserDescription(handle:string,password:string) {
     console.log(handle, password);
-    const description = this.httpClient.get('https://sparkfly.us/api/v0/usr/'+handle+'/'+Md5.hashStr(password)+'/description');
-    console.log(description);
+    // ${Variable}
+    this.description = this.httpClient.get('https://sparkfly.us/api/v0/usr/neil/25d55ad283aa400af464c76d713c07ad/description');
+    this.description.subscribe(data => {
+      console.log('data: ', data);
+    })
+    console.log(this.description);
   }
 
 }
