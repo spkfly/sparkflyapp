@@ -10,6 +10,7 @@ export class UserService {
   private _handle: string;
   private _firstName: string;
   private _lastName: string;
+  private _photo: string;
   private _description: string;
 
   get handle() {
@@ -30,6 +31,14 @@ export class UserService {
 
   set lastName(name: string) {
     this._lastName = name;
+  }
+
+  get photo() {
+    return this._photo;
+  }
+
+  set photo(pic: string) {
+    this._photo = pic;
   }
 
   get description() {

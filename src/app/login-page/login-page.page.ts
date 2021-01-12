@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { Md5 } from 'ts-md5/dist/md5';
-import { stringify } from 'querystring';
 import { Observable } from 'rxjs';
+import { RestService } from '../services/rest-service/rest.service';
 
 @Component({
   selector: 'app-login-page',
@@ -21,8 +20,13 @@ export class LoginPagePage implements OnInit {
   constructor(
     public formBuilder: FormBuilder,
     private router: Router,
-    public httpClient: HttpClient
-  ) { this.api_data=''; }
+    public httpClient: HttpClient,
+    public restService: RestService
+  ) 
+  { 
+    this.api_data=''; 
+    restService.getUserDescription();
+  }
 
   // Fires only the first time the page is loaded
   ngOnInit() {
@@ -40,7 +44,9 @@ export class LoginPagePage implements OnInit {
   btnClick() {
     let handle = (<HTMLInputElement>document.getElementById("handle-input")).value;
     let password = (<HTMLInputElement>document.getElementById("password-input")).value;
-    this.getUserDescription(handle, password);
+    console.log(handle, password);
+    //this.restService.getUserDescription();
+    this.restService.validateLogin(handle,password);
   }
 
   onSubmit(values) {
@@ -53,6 +59,7 @@ export class LoginPagePage implements OnInit {
     console.log('get request function');
   }
 
+  /*
   getUserDescription(handle:string,password:string) {
     console.log(handle, password);
     // ${Variable}
@@ -62,5 +69,5 @@ export class LoginPagePage implements OnInit {
     })
     console.log(this.description);
   }
-
+*/
 }
