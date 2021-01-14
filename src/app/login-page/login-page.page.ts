@@ -15,7 +15,6 @@ export class LoginPagePage implements OnInit {
   login_form: FormGroup;
   api_data: string;
   http: any;
-  description: Observable<any>;
 
   constructor(
     public formBuilder: FormBuilder,
@@ -24,8 +23,7 @@ export class LoginPagePage implements OnInit {
     public restService: RestService
   ) 
   { 
-    this.api_data=''; 
-    restService.getUserDescription();
+    this.api_data='';
   }
 
   // Fires only the first time the page is loaded
@@ -45,7 +43,6 @@ export class LoginPagePage implements OnInit {
     let handle = (<HTMLInputElement>document.getElementById("handle-input")).value;
     let password = (<HTMLInputElement>document.getElementById("password-input")).value;
     console.log(handle, password);
-    //this.restService.getUserDescription();
     this.restService.validateLogin(handle,password);
   }
 
@@ -59,15 +56,4 @@ export class LoginPagePage implements OnInit {
     console.log('get request function');
   }
 
-  /*
-  getUserDescription(handle:string,password:string) {
-    console.log(handle, password);
-    // ${Variable}
-    this.description = this.httpClient.get('https://sparkfly.us/api/v0/usr/neil/25d55ad283aa400af464c76d713c07ad/description');
-    this.description.subscribe(data => {
-      console.log('data: ', data);
-    })
-    console.log(this.description);
-  }
-*/
 }

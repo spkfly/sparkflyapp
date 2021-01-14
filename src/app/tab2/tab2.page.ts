@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from '../services/user-service/user.service';
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor(private user: UserService) {}
 
+  description = this.user.description;
+  firstname = this.user.firstName;
+  lastname = this.user.lastName;
+  photoUrl = this.user.photo;
 }

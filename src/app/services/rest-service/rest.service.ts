@@ -20,9 +20,12 @@ export class RestService {
     this.http.get('https://sparkfly.us/api/v0/usr/'+handle+'/'+Md5.hashStr(password)+'/description')
     .subscribe(data => {
       console.log('response: ', data);
-      if (data.error === 'ok') {
+      if (data["error"] === 'ok') {
         console.log('good');
-        this.user.description = data.description;
+        this.user.description = data["description"];
+        this.user.photo = data["photo_url"];
+        this.user.firstName = data["firstname"];
+        this.user.lastName = data["lastname"];
       }
       else {
         console.log('bad');
@@ -32,20 +35,5 @@ export class RestService {
     })
   }
 
-  getUserDescription() {
-    return this.http.get('https://sparkfly.us/api/v0/usr/neil/25d55ad283aa400af464c76d713c07ad/description')
-    .subscribe(data => {
-      console.log('response: ', data);
-    })
-  }
 
-  /*
-  console.log(handle, password);
-    // ${Variable}
-    this.description = this.httpClient.get('https://sparkfly.us/api/v0/usr/neil/25d55ad283aa400af464c76d713c07ad/description');
-    this.description.subscribe(data => {
-      console.log('data: ', data);
-    })
-    console.log(this.description);
-    */
 }
