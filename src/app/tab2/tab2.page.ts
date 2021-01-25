@@ -14,4 +14,5 @@ export class Tab2Page {
   firstname = this.user.firstName;
   lastname = this.user.lastName;
   photoUrl = this.user.photo;
+
 }

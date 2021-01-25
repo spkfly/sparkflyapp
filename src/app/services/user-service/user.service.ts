@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { RestService } from '../rest-service/rest.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,13 +9,27 @@ export class UserService {
   constructor() { }
 
   private _handle: string;
+  private _password: string;
   private _firstName: string;
   private _lastName: string;
   private _photo: string;
   private _description: string;
+  accessToken?: string;
 
   get handle() {
     return this._handle;
+  }
+
+  set handle(handle: string) {
+    this._handle = handle;
+  }
+
+  get password() {
+    return this._password;
+  }
+
+  set password(pass: string) {
+    this._password = pass;
   }
 
   get firstName() {
@@ -48,6 +63,5 @@ export class UserService {
   set description(des: string) {
     this._description = des;
   }
-
 
 }

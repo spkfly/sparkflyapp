@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
-import { catchError, tap } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 import { Md5 } from 'ts-md5/dist/md5';
 import { UserService } from '../user-service/user.service';
+import { BehaviorSubject } from 'rxjs';
+import { Platform } from '@ionic/angular';
 
 
 @Injectable({
@@ -13,26 +14,69 @@ import { UserService } from '../user-service/user.service';
 
 export class RestService {
 
-  constructor(private http: HttpClient,
-    public user: UserService) { }
+  authState = new BehaviorSubject(false);
 
-  validateLogin(handle, password) {
+  constructor(
+    private http: HttpClient,
+    public user: UserService,
+    private router: Router,
+    private storage: Storage,
+    private platform: Platform) 
+    { 
+      this.platform.ready().then(() => {
+        this.isLoggedIn();
+      });
+    }
+
+  login(handle, password) {
     this.http.get('https://sparkfly.us/api/v0/usr/'+handle+'/'+Md5.hashStr(password)+'/description')
     .subscribe(data => {
       console.log('response: ', data);
       if (data["error"] === 'ok') {
-        console.log('good');
+        this.user.handle = handle;
+        this.user.password = password;
         this.user.description = data["description"];
         this.user.photo = data["photo_url"];
         this.user.firstName = data["firstname"];
         this.user.lastName = data["lastname"];
+
+        var info = {
+          user_handle: this.user.handle,
+          user_password: this.user.password,
+          user_description: this.user.description,
+          user_photo: this.user.photo,
+          user_firstname: this.user.firstName,
+          user_lastname: this.user.lastName
+        };
+        this.storage.set('user-info', info).then((response) => {
+          this.router.navigate(['tabs']);
+          this.authState.next(true);
+        });
       }
       else {
-        console.log('bad');
         alert('Incorrect username or password');
         
       }
-    })
+    });
+  }
+
+  logout() {
+    this.storage.remove('user-info').then(() => {
+      this.router.navigate(['account-ui']);
+      this.authState.next(false);
+    });
+  }
+
+  isLoggedIn() {
+    this.storage.get('user-info').then((response) => {
+      if (response) {
+        this.authState.next(true);
+      }
+    });
+  }
+
+  isAuthenticated() {
+    return this.authState.value;
   }
 
 

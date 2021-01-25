@@ -18,11 +18,9 @@
       <ion-input id="password-input" type="password" placeholder="Password" formControlName="password"></ion-input>
     </ion-item>
 
-    <ion-button (click)="btnClick()" id="login-submit" class="submit-button" type="submit" expand="block" color="primary">Login</ion-button>
-
-    <ion-item id="incorrect-login">
-      <div>Incorrect username or password</div>
-    </ion-item>
+    <ion-button (click)="btnClick()" routerLink="['/tabs']" routerDirection="root" 
+      id="login-submit" class="submit-button" type="submit" 
+        expand="block" color="primary">Login</ion-button>
 
   </form>
 </ion-content>

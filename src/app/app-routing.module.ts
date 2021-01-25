@@ -3,7 +3,10 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: '', redirectTo: 'account-ui', pathMatch: 'full'
+  },
+  {
+    path: 'tabs',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
@@ -33,7 +36,8 @@ const routes: Routes = [
   {
     path: 'account-ui',
     loadChildren: () => import('./account-ui/account-ui.module').then( m => m.AccountUiPageModule)
-  },  {
+  },
+  {
     path: 'photos',
     loadChildren: () => import('./photos/photos.module').then( m => m.PhotosPageModule)
   }
