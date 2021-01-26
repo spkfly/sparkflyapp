@@ -14,19 +14,20 @@ import { Platform } from '@ionic/angular';
 
 export class RestService {
 
-  authState = new BehaviorSubject(false);
+  //authState = new BehaviorSubject(false);
 
   constructor(
     private http: HttpClient,
     public user: UserService,
     private router: Router,
-    private storage: Storage,
-    private platform: Platform) 
-    { 
+    //private storage: Storage,
+    //private platform: Platform
+    ) {}
+    /*{ 
       this.platform.ready().then(() => {
         this.isLoggedIn();
       });
-    }
+    }*/
 
   login(handle, password) {
     this.http.get('https://sparkfly.us/api/v0/usr/'+handle+'/'+Md5.hashStr(password)+'/description')
@@ -39,7 +40,8 @@ export class RestService {
         this.user.photo = data["photo_url"];
         this.user.firstName = data["firstname"];
         this.user.lastName = data["lastname"];
-
+        this.router.navigate(['/tabs/tabs/tab1']);
+        /*
         var info = {
           user_handle: this.user.handle,
           user_password: this.user.password,
@@ -48,10 +50,12 @@ export class RestService {
           user_firstname: this.user.firstName,
           user_lastname: this.user.lastName
         };
+        
         this.storage.set('user-info', info).then((response) => {
           this.router.navigate(['tabs']);
           this.authState.next(true);
         });
+        */
       }
       else {
         alert('Incorrect username or password');
@@ -59,7 +63,7 @@ export class RestService {
       }
     });
   }
-
+/*
   logout() {
     this.storage.remove('user-info').then(() => {
       this.router.navigate(['account-ui']);
@@ -78,6 +82,6 @@ export class RestService {
   isAuthenticated() {
     return this.authState.value;
   }
-
+*/
 
 }
