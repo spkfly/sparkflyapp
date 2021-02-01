@@ -19,6 +19,11 @@
     </ion-toolbar>
 </ion-header>
 
+<!--
+<ion-icon name="settings-sharp"></ion-icon>
+-->
+<ion-button class="edit-prof" [routerLink]="['/edit-profile']" size="small" color="secondary">EDIT</ion-button>
+
 <ion-card class="prof-card">
     <img class="profile-img" src={{photoUrl}}>
     <div class="card-title">{{firstname}} {{lastname}}</div>
