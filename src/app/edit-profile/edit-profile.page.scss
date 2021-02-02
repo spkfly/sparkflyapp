@@ -10,9 +10,13 @@ ion-title {
 }
 ion-content {
     --ion-background-color: #1a202c;
+    ion-button {
+        margin-top: 10%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
 }
-ion-button {
-    margin-top: 10%;
-    margin-left: 15%;
-    margin-right: 15%;
+
+.cancel-btn {
+    margin-right: 80%;
 }

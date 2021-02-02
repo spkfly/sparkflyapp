@@ -84,4 +84,9 @@ export class RestService {
   }
 */
 
+/* EDIT PROFILE FUNCTIONS */
+changePass(current_pass, updated_pass) {
+  
+}
+
 }

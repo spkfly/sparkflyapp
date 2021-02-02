@@ -31,7 +31,7 @@ export class LoginPagePage implements OnInit {
     });
   }
 
-  btnClick() {
+  loginSubmitClick() {
     let handle = (<HTMLInputElement>document.getElementById("handle-input")).value;
     let password = (<HTMLInputElement>document.getElementById("password-input")).value;
     console.log(handle, password);
