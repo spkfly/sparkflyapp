@@ -30,7 +30,7 @@ export class RestService {
     }*/
 
   login(handle, password) {
-    this.http.get('https://sparkfly.us/api/v0/usr/'+handle+'/'+Md5.hashStr(password)+'/description')
+    this.http.get('https://sparkfly.us/api/v0/usr/'+handle+'/'+Md5.hashStr(password)+'/userinfo')
     .subscribe(data => {
       console.log('response: ', data);
       if (data["error"] === 'ok') {
