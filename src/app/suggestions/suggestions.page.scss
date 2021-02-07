@@ -1,0 +1,29 @@
+ion-header {
+    --ion-background-color: #1a202c;
+    ion-title {
+        color: #dedba6;
+    }
+}
+
+.hr-line {
+    background-color: gray;
+}
+
+.date-title {
+    margin-top: 2%;
+    font-size: large;
+    color: #1f7872;
+}
+
+.by-user {
+    margin-top: 3%;
+    font-size: small;
+    font-weight: bold;
+    color: #1f7872;
+}
+
+.date-desc {
+    margin-top: 3%;
+    font-size: small;
+    color: #1f7872;
+}
