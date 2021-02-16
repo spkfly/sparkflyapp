@@ -5,14 +5,13 @@ import { Calendar } from '@ionic-native/calendar/ngx';
   providedIn: 'root'
 })
 
-export class CalendarServiceService {
+export class CalendarService {
 
-  constructor(private calendar: Calendar) { }
+  constructor(private calendar: Calendar) { 
+    this.calendar.createCalendar('MyCalendar').then(
+      (msg) => { console.log(msg); },
+      (err) => { console.log(err); }
+    );
+  }
 
-  /*
-  this.calendar.createCalendar('MyCalendar').then(
-    (msg) => { console.log(msg); },
-    (err) => { console.log(err); }
-  );
-  */
 }

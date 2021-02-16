@@ -8,12 +8,12 @@
   <ion-grid>
     <ion-row align-self-center>
       <ion-col align-self-center>
-        <ion-button routerLink="['/login-page']" routerDirection="forward "class="ui-button" 
+        <ion-button [routerLink]="['/login-page']" routerDirection="forward" class="ui-button" 
           expand="block" color="success">Sign In</ion-button>
         
           <div class="divider line one-line">or</div>
         
-        <ion-button routerLink="['/sign-up']" routerDirection="forward" class="ui-button" 
+        <ion-button [routerLink]="['/sign-up']" routerDirection="forward" class="ui-button" 
           expand="block" color="secondary">Create new account</ion-button>
       </ion-col>
     </ion-row>

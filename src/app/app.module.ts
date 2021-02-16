@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RestService } from './services/rest-service/rest.service';
+import { Calendar } from '@ionic-native/calendar/ngx';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { RestService } from './services/rest-service/rest.service';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     HttpClient,
-    RestService
+    RestService,
+    Calendar
   ],
   bootstrap: [AppComponent]
 })

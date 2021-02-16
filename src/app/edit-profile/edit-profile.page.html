@@ -4,11 +4,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-button class="cancel-btn" fill="clear" routerLink="['/tabs/tabs/tab2']" routerDirection="back">Cancel</ion-button>
+<ion-button class="cancel-btn" fill="clear" [routerLink]="['/tabs/tabs/tab2']" routerDirection="back">Cancel</ion-button>
 
 <ion-content>
   <ion-button expand="block" color="success">Edit Name</ion-button>
   <ion-button expand="block" color="success">Edit Description</ion-button>
-  <ion-button routerLink="['/change-password']" routerDirection="forward" 
+  <ion-button [routerLink]="['/change-password']" routerDirection="forward" 
     expand="block" color="success">Change Password</ion-button>
 </ion-content>

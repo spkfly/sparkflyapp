@@ -3,10 +3,10 @@
         <ion-grid>
             <ion-row class="header-row">
                 <ion-col class="header-col" size="3">
-                    <ion-button routerLink="['/calendar']" routerDirection="forward" class="home-header-button" color="success" expand="full">Calendar</ion-button>
+                    <ion-button [routerLink]="['/calendar']" routerDirection="forward" class="home-header-button" color="success" expand="full">Calendar</ion-button>
                 </ion-col>
                 <ion-col class="header-col" size="3">
-                    <ion-button routerLink="['/photos']" routerDirection="forward" class="home-header-button" color="success" expand="full">Photos</ion-button>
+                    <ion-button [routerLink]="['/photos']" routerDirection="forward" class="home-header-button" color="success" expand="full">Photos</ion-button>
                 </ion-col>
                 <ion-col class="header-col" size="3">
                     <ion-button class="home-header-button" color="success" expand="full">Stories</ion-button>
@@ -19,7 +19,7 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-button class="settings-btn" routerLink="['/edit-profile']" routerDirection="forward" size="small" color="secondary">
+<ion-button class="settings-btn" [routerLink]="['/edit-profile']" routerDirection="forward" size="small" color="secondary">
     <ion-icon name="settings-sharp"></ion-icon>
 </ion-button>
 

@@ -9,10 +9,10 @@
                     <ion-button color="secondary" expand="full">Research</ion-button>
                 </ion-col>
                 <ion-col>
-                    <ion-button color="secondary" expand="full" routerLink="['/suggestions']" routerDirection="forward">Suggestions</ion-button>
+                    <ion-button color="secondary" expand="full" [routerLink]="['/suggestions']" routerDirection="forward">Suggestions</ion-button>
                 </ion-col>
                 <ion-col>
-                    <ion-button color="secondary" expand="full" routerLink="['/tabs']" routerDirection="root">Save</ion-button>
+                    <ion-button color="secondary" expand="full" [routerLink]="['/tabs']" routerDirection="root">Save</ion-button>
                 </ion-col>
             </ion-row>
         </ion-grid>
@@ -81,6 +81,6 @@
 
 <ion-footer>
     <ion-toolbar>
-        <ion-button color="warning" expand="full" routerLink="/" routerDirection="back">Send Invite</ion-button>
+        <ion-button color="warning" expand="full" [routerLink]="['tabs/tabs/tab4']" routerDirection="back">Send Invite</ion-button>
     </ion-toolbar>
 </ion-footer>
