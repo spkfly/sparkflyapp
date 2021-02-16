@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar text-center>
-    <ion-button fill="clear" [routerLink]="['/account-ui']">Cancel</ion-button>
+    <ion-button fill="clear" routerLink="['/account-ui']" routerDirection="back">Cancel</ion-button>
     <ion-title>Create An Account</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -29,13 +29,16 @@
         </div>
       </ng-container>
     </div>
-    <!--GENDER-->
+    
+    <!--GENDER        *CURRENTLY NOT IN USE*
     <ion-item>
       <ion-label color="secondary">Gender</ion-label>
       <ion-select formControlName="firstName" cancelText="Cancel" okText="OK">
         <ion-select-option *ngFor="let gender of genders" [value]="gender">{{gender}}</ion-select-option>
       </ion-select>
     </ion-item>
+    -->
+
     <!--USERNAME-->
     <ion-item>
       <ion-input type="text" placeholder="Username" formControlName="handle"></ion-input>

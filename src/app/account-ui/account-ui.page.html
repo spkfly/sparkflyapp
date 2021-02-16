@@ -1,18 +1,22 @@
 
 <ion-content class="ui-page">
+  
   <ion-item>
     <img class="ui-img" src="/assets/photos/logo_red_blue.jpg">
   </ion-item>
+  
   <ion-grid>
     <ion-row align-self-center>
       <ion-col align-self-center>
-        <ion-button [routerLink]="['/login-page']" class="ui-button" expand="block" color="success">Sign In</ion-button>
-        <div class="divider line one-line">or</div>
-        <ion-button [routerLink]="['/sign-up']" class="ui-button" expand="block" color="secondary">Create new account</ion-button>
+        <ion-button routerLink="['/login-page']" routerDirection="forward "class="ui-button" 
+          expand="block" color="success">Sign In</ion-button>
+        
+          <div class="divider line one-line">or</div>
+        
+        <ion-button routerLink="['/sign-up']" routerDirection="forward" class="ui-button" 
+          expand="block" color="secondary">Create new account</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-item>
-    <ion-button [routerLink]="['/tabs/tabs/tab1']" expand="block">Temp</ion-button>
-  </ion-item>
+
 </ion-content>

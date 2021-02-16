@@ -9,10 +9,10 @@
                     <ion-button color="secondary" expand="full">Research</ion-button>
                 </ion-col>
                 <ion-col>
-                    <ion-button color="secondary" expand="full" [routerLink]="['/suggestions']">Suggestions</ion-button>
+                    <ion-button color="secondary" expand="full" routerLink="['/suggestions']" routerDirection="forward">Suggestions</ion-button>
                 </ion-col>
                 <ion-col>
-                    <ion-button color="secondary" expand="full" routerLink="/" routerDirection="back">Save</ion-button>
+                    <ion-button color="secondary" expand="full" routerLink="['/tabs']" routerDirection="root">Save</ion-button>
                 </ion-col>
             </ion-row>
         </ion-grid>
