@@ -7,6 +7,10 @@
 
 <ion-content padding>
   <form [formGroup]="signup_form" (ngSubmit)="onSubmit(signup_form.value)">
+    <!--EMAIL-->
+    <ion-item>
+      <ion-input id="email" type="text" placeholder="email"></ion-input>
+    </ion-item>
     <!--FIRST NAME-->
     <ion-item>
       <ion-input type="text" placeholder="First Name" formControlName="firstName"></ion-input>
@@ -29,19 +33,10 @@
         </div>
       </ng-container>
     </div>
-    
-    <!--GENDER        *CURRENTLY NOT IN USE*
-    <ion-item>
-      <ion-label color="secondary">Gender</ion-label>
-      <ion-select formControlName="firstName" cancelText="Cancel" okText="OK">
-        <ion-select-option *ngFor="let gender of genders" [value]="gender">{{gender}}</ion-select-option>
-      </ion-select>
-    </ion-item>
-    -->
 
     <!--USERNAME-->
     <ion-item>
-      <ion-input type="text" placeholder="Username" formControlName="handle"></ion-input>
+      <ion-input id="username" type="text" placeholder="Username" formControlName="handle"></ion-input>
     </ion-item>
     <div class="valid-errors">
       <ng-container *ngFor="let validation of validation_messages.handle">
@@ -53,7 +48,7 @@
     <!--PASSWORD-->
     <div formGroupName="matching_passwords">
       <ion-item>
-        <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+        <ion-input id="password" type="password" placeholder="Password" formControlName="password"></ion-input>
       </ion-item>
       <div class="valid-errors">
         <ng-container *ngFor="let validation of validation_messages.password">
@@ -95,7 +90,8 @@
       </ng-container>
     </div>
     <!--SUBMIT BUTTON-->
-    <ion-button color="success" expand="block" type="submit" [disabled]="!signup_form.valid">Create Account</ion-button>
+    <ion-button (click)="signUpClick()" color="success" expand="block" type="submit" >Create Account</ion-button>
   
+    <!--[disabled]="!signup_form.valid"-->
   </form>
 </ion-content>

@@ -1,6 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { RestService } from '../services/rest-service/rest.service';
 import { PasswordValidator } from '../validators/password.validator';
 import { UsernameValidator } from '../validators/username.validator';
 
@@ -14,18 +16,14 @@ export class SignUpPage implements OnInit {
   signup_form: FormGroup;
   matching_passwords_group: FormGroup;
 
-  genders: Array<string>;
-
   constructor(
     public formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    public httpClient: HttpClient,
+    public restService: RestService
   ) {}
 
   ngOnInit() {
-    this.genders = [
-      "Male",
-      "Female"
-    ];
     
     this.matching_passwords_group = new FormGroup({
       password: new FormControl('', Validators.compose([
@@ -52,7 +50,6 @@ export class SignUpPage implements OnInit {
         Validators.required,
         Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$') //must be <text>@<text>.<text>
       ])),
-      gender: new FormControl(this.genders[0], Validators.required),
       matching_passwords: this.matching_passwords_group,
       terms: new FormControl(true, Validators.pattern('true'))
     });
@@ -94,7 +91,14 @@ export class SignUpPage implements OnInit {
 
   onSubmit(values) {
     console.log(values);
-    this.router.navigate(["/tab1"]); //temporarily routes to home page
+  }
+
+  signUpClick() {
+    let handle = (<HTMLInputElement>document.getElementById('username'));
+    let password = (<HTMLInputElement>document.getElementById('password'));
+    let email = (<HTMLInputElement>document.getElementById('email'));
+    console.log(handle, password, email);
+    this.restService.registerNewUser(handle, password, email);
   }
 
 }

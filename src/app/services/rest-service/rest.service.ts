@@ -29,6 +29,27 @@ export class RestService {
       });
     }*/
 
+  registerNewUser(handle, password, email) {
+    let userData = {
+      'handle': handle,
+      'password': password,
+      'email_address': email
+    };
+    let headers = {
+      headers: {'Content-Type': 'application/json'}
+    }
+    this.http.post('http://3.137.198.204:8080/user/register', userData, headers)
+    .subscribe(data => {
+      console.log('response: ', data);
+      if (data["message"] === 'New user created!') {
+        console.log("User successfully created");
+        this.router.navigate(['/tabs/tabs/tab1']);
+      } else {
+        console.log('error');
+      }
+    });
+  }
+  
   login(handle, password) {
     this.http.get('https://sparkfly.us/api/v0/usr/'+handle+'/'+Md5.hashStr(password)+'/userinfo')
     .subscribe(data => {
@@ -84,9 +105,6 @@ export class RestService {
   }
 */
 
-/* EDIT PROFILE FUNCTIONS */
-changePass(current_pass, updated_pass) {
-  
-}
+
 
 }
